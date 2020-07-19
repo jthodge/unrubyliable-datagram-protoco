@@ -15,8 +15,6 @@ loop do
   remote = sender[3]
 
   puts "#{remote} sent #{message}"
-
-  response = (message.to_i * 2).to_s
   puts "We'll respond with #{message.upcase}"
 
   socket.send(message.upcase, 0, host, port)
